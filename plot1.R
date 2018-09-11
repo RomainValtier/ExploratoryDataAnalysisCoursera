@@ -23,7 +23,7 @@ plot1.data$Time <- times(plot1.data$Time)
 # 4. Select data from 2007-02-01 and 2007-02-02 
 plot1.data <- plot1.data[plot1.data$Date >= "2007-02-01" & plot1.data$Date <= "2007-02-02", ]
 
-# 5. Histogram Global Active Power
+# 5. Generate Plot1
 png("plot1.png")
 hist(plot1.data$Global_active_power, col = "red", main = "Global Active Power", xlab = "Gloabl Active Power (kilowatts)")
 dev.off()
