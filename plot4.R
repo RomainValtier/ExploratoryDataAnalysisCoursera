@@ -1,5 +1,3 @@
-setwd("C:\\Users\\s8310533\\Documents\\GitHub\\ExploratoryDataAnalysisCoursera")
-
 # 0. Get data
 
 fileURL <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
@@ -24,8 +22,6 @@ plot4.data$Time <- times(plot4.data$Time)
 
 # 4. Select data from 2007-02-01 and 2007-02-02 
 plot4.data <- plot4.data[plot4.data$Date >= "2007-02-01" & plot4.data$Date <= "2007-02-02", ]
-
-str(plot4.data)
 
 # 5. Generate Plot4
 Sys.setlocale("LC_TIME", "C")
