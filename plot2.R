@@ -23,7 +23,7 @@ plot2.data$Time <- times(plot2.data$Time)
 # 4. Select data from 2007-02-01 and 2007-02-02 
 plot2.data <- plot2.data[plot2.data$Date >= "2007-02-01" & plot2.data$Date <= "2007-02-02", ]
 
-# 5. Plot Global Active Power in time period
+# 5. Genrate Plot2
 png("plot2.png")
 Sys.setlocale("LC_TIME", "C")
 plot(as.POSIXct(paste(plot2.data$Date, plot2.data$Time)),plot2.data$Global_active_power, type = "l", main = "", ylab = "Global Active Power (kilowatts)", xlab = "")
