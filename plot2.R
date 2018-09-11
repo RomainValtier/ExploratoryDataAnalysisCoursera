@@ -1,3 +1,5 @@
+setwd("C:\\Users\\s8310533\\Documents\\GitHub\\ExploratoryDataAnalysisCoursera")
+
 # 0. Get data
 
 fileURL <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
@@ -23,8 +25,13 @@ plot2.data$Time <- times(plot2.data$Time)
 # 4. Select data from 2007-02-01 and 2007-02-02 
 plot2.data <- plot2.data[plot2.data$Date >= "2007-02-01" & plot2.data$Date <= "2007-02-02", ]
 
-# 5. Genrate Plot2
-png("plot2.png")
+str(plot2.data)
+
+# 5. Generate Plot2
 Sys.setlocale("LC_TIME", "C")
+
+png("plot2.png", width = 480, height = 480)
+
 plot(as.POSIXct(paste(plot2.data$Date, plot2.data$Time)),plot2.data$Global_active_power, type = "l", main = "", ylab = "Global Active Power (kilowatts)", xlab = "")
+
 dev.off()

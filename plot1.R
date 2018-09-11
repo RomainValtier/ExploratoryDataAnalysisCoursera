@@ -1,3 +1,5 @@
+setwd("C:\\Users\\s8310533\\Documents\\GitHub\\ExploratoryDataAnalysisCoursera")
+
 # 0. Get data
 
 fileURL <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
@@ -23,7 +25,13 @@ plot1.data$Time <- times(plot1.data$Time)
 # 4. Select data from 2007-02-01 and 2007-02-02 
 plot1.data <- plot1.data[plot1.data$Date >= "2007-02-01" & plot1.data$Date <= "2007-02-02", ]
 
+str(plot1.data)
+
 # 5. Generate Plot1
-png("plot1.png")
+Sys.setlocale("LC_TIME", "C")
+
+png("plot1.png", width = 480, height = 480)
+
 hist(plot1.data$Global_active_power, col = "red", main = "Global Active Power", xlab = "Gloabl Active Power (kilowatts)")
+
 dev.off()
