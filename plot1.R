@@ -1,5 +1,3 @@
-setwd("C:\\Users\\s8310533\\Documents\\GitHub\\ExploratoryDataAnalysisCoursera")
-
 # 0. Get data
 
 fileURL <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
@@ -24,8 +22,6 @@ plot1.data$Time <- times(plot1.data$Time)
 
 # 4. Select data from 2007-02-01 and 2007-02-02 
 plot1.data <- plot1.data[plot1.data$Date >= "2007-02-01" & plot1.data$Date <= "2007-02-02", ]
-
-str(plot1.data)
 
 # 5. Histogram Global Active Power
 png("plot1.png")
